@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Transfer System</title>
+		<script src="script/Person.js"></script>
+		<script src="script/Account.js"></script>
+		<script src="script/TransferService.js"></script>
+	</head>
+	<body>
+		<script>
+			var person1 = new Person("Petya",  new Date(1999, 0, 12));
+			var person2 = new Person("Sasha",  new Date(2000, 1, 12));
+			var account1 = new Account("First account");
+			var account2 = new Account("Second account");
+			transferService.register(person1, account1, 100);
+			transferService.register(person2, account2, 300);
+			transferService.transfer(account1, account2, 50);
+			transferService.getPersonAccounts(person1);
+		</script>
+	</body>
+</html>
